@@ -25,17 +25,17 @@ const codeStyles = {
 }
 
 // markup
-const ForbiddenPage = () => {
+const badRequest = () => {
   return (
     <main style={pageStyles}>
       <title>Forbidden</title>
-      <h1 style={headingStyles}> Error 403 : Page forbidden</h1>
+      <h1 style={headingStyles}> Error 400 : Bad Request</h1>
       <p style={paragraphStyles}>
         Sorry{" "}
         <span role="img" aria-label="Pensive emoji">
           😔
         </span>{" "}
-        This page is forbidden.
+        Bad Request
         <br />
         {process.env.NODE_ENV === "development" ? (
           <>
@@ -51,4 +51,4 @@ const ForbiddenPage = () => {
   )
 }
 
-export default ForbiddenPage
+export default badRequest
